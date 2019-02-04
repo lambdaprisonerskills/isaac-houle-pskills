@@ -255,53 +255,28 @@ header .bg-color .text p {
   flex: 1 0 100%;
   flex-wrap: wrap;
   align-content: center;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
+  height: 200px;
 }
 .grid .box .box-content {
   width: 80%;
   margin: 20px 0;
 }
-.grid .box .box-content h3 {
-  padding: 10px 0;
-  border-bottom: 1px solid white;
-  font-size: 2rem;
-  width: 30%;
-}
-.grid .box .box-content address {
-  line-height: 1.25;
-  margin: 10px 0;
-}
-.grid .box .box-content p {
-  font-size: 1.6rem;
-  padding: 0;
-  border-bottom: none;
-  width: 100%;
-}
 @media (min-width: 500px) {
   .grid .box {
-    flex: 1, 0, 30%;
+    flex: 1 0 30%;
   }
 }
-.grid .box1 {
-  background: url("/img/pic08.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.grid .box:nth-child(1n) {
+  background: #6fc3df;
 }
-.grid .box2 {
-  background: url("/img/pic09.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.grid .box:nth-child(2n) {
+  background: #8d82c4;
 }
-.grid .box3 {
-  background: url("/img/pic10.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.grid .box:nth-child(3n) {
+  background: #ec8d81;
+}
+.grid .box:nth-child(4n) {
+  background: #e7b788;
 }
 .menu {
   background: rgba(36, 41, 67, 0.85);
