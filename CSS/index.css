@@ -1,0 +1,350 @@
+.img-bg {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+}
+html,
+body {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  line-height: 1.5;
+}
+.primary-button {
+  background-color: white;
+  color: #242943;
+  padding: 10px 30px;
+  border: 1px solid white;
+}
+.secondary-button {
+  font-size: 1.4rem;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 30px;
+  margin: 30px 0;
+}
+header {
+  background-image: url("/img/working-together2.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 60vh;
+  color: white;
+}
+header .bg-color {
+  background: rgba(36, 41, 67, 0.85);
+  height: 100%;
+}
+header .bg-color nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  position: fixed;
+  width: 100%;
+}
+header .bg-color nav i {
+  font-size: 2.4rem;
+  color: white;
+  margin-right: 10px;
+}
+header .bg-color nav a {
+  background: white;
+  font-size: 1.2rem;
+  color: #242943;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+  margin-left: 10px;
+}
+header .bg-color .text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+header .bg-color .text h1 {
+  font-size: 2.4rem;
+  padding: 20px 0;
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+header .bg-color .text p {
+  font-size: 1.6rem;
+  width: 100%;
+  margin: 10px 0 0;
+}
+.about {
+  background: #242943;
+  color: white;
+}
+.about .about-content {
+  width: 90%;
+  margin: 0 auto;
+}
+.about .about-content h2 {
+  font-size: 1.8rem;
+  padding: 20px 0 15px;
+  border-bottom: 1px solid white;
+  width: 30%;
+}
+.about .about-content p {
+  font-size: 1.6rem;
+  padding: 20px 0 0;
+  border-bottom: none;
+}
+.about .about-content .button-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .about-content .button-area button {
+  width: 45%;
+}
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.grid .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 100%;
+  flex-wrap: wrap;
+  align-content: center;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+.grid .box .box-content {
+  width: 80%;
+  margin: 20px 0;
+}
+.grid .box .box-content h3 {
+  padding: 10px 0;
+  border-bottom: 1px solid white;
+  font-size: 2rem;
+  width: 30%;
+}
+.grid .box .box-content address {
+  line-height: 1.25;
+  margin: 10px 0;
+}
+.grid .box .box-content p {
+  font-size: 1.6rem;
+  padding: 0;
+  border-bottom: none;
+  width: 100%;
+}
+@media (min-width: 500px) {
+  .grid .box {
+    flex: 1, 0, 30%;
+  }
+}
+.grid .box1 {
+  background: url("/img/pic08.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.grid .box2 {
+  background: url("/img/pic09.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.grid .box3 {
+  background: url("/img/pic10.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.menu {
+  background: rgba(36, 41, 67, 0.85);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  display: none;
+}
+.menu .close {
+  color: white;
+  font-size: 3rem;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+.menu .menu-content {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.menu .menu-content a {
+  font-size: 1.6rem;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+}
+.menu .menu-content button {
+  font-size: 1.6rem;
+  padding: 15px 0;
+  border-bottom: 1px solid white;
+  margin: 20px 0 0;
+  font-weight: bold;
+  width: 100%;
+}

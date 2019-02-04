@@ -1,0 +1,44 @@
+.grid {
+  .custom-flex(center, center);
+  flex-wrap: wrap;
+  .box {
+    .custom-flex(center, center);
+    flex: 1 0 100%;
+    flex-wrap: wrap;
+    align-content: center;
+    .img-bg();
+    color: white;
+    .box-content {
+      width: 80%;
+      margin: 20px 0;
+      h3 {
+        .font(2rem, 10px 0, 1px solid white);
+        font-size: 2rem;
+        width: 30%;
+      }
+      address {
+        line-height: 1.25;
+        margin: 10px 0;
+      }
+      p {
+        .font(1.6rem, 0, none);
+        width: 100%;
+      }
+    }
+    @media @tablet {
+      flex: 1, 0, 30%;
+    }
+  }
+  .box1 {
+    background: url("/img/pic08.jpg");
+    .img-bg();
+  }
+  .box2 {
+    background: url("/img/pic09.jpg");
+    .img-bg();
+  }
+  .box3 {
+    background: url("/img/pic10.jpg");
+    .img-bg();
+  }
+}

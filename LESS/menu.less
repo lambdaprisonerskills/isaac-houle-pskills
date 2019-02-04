@@ -1,0 +1,37 @@
+.menu {
+  background: @banner-color;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  .custom-flex(center, center);
+  flex-wrap: wrap;
+  align-content: center;
+  display: none;
+  .close {
+    color: white;
+    font-size: 3rem;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+  .menu-content {
+    width: 90%;
+    .custom-flex(center, center);
+    flex-wrap: wrap;
+    a {
+      .font(1.6rem, 20px 0, 1px solid rgba(255, 255, 255, 0.5));
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      width: 100%;
+      text-align: center;
+    }
+    button {
+      .font(1.6rem, 15px 0, 1px solid white);
+      margin: 20px 0 0;
+      font-weight: bold;
+      width: 100%;
+    }
+  }
+}
