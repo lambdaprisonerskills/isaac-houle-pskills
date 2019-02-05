@@ -15,28 +15,30 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/index.css" />
-    <script src="./components/Menu/menu.js" async></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" async></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="./js/menu.js" async></script>
+    <script src="./js/header-animations.js" async></script>
+    <script src="./js/box.js" async></script>
     <title>Prisoner Skills</title>
   </head>
   <body>
     <main>
-      <header>
+      <header class="banner">
         <nav>
-          <a href="#" class="logo"> Prisoner Skills </a>
+          <a href="https://lambda-prisoner-skills.herokuapp.com/" class="logo"
+          target="_blank"> Prisoner Skills </a>
           <i class="fas fa-bars menu-button"></i>
         </nav>
-        <div class="bg-color">
-          <div class="text">
+        <div class="banner-color">
+          <div class="header-content">
             <h1>
-              Some Header Text
+              We Are Prisoner Skills
             </h1>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa,
-              consequuntur eius!
+              A place for hard-working, experienced professionals to find work while incarcerated. 
             </p>
-            <a class="btn secondary-button">GET STARTED</a>
+            <a href="https://lambda-prisoner-skills.herokuapp.com/" class="btn secondary-button"
+            target="_blank">GET STARTED</a>
           </div>
         </div>
       </header>
@@ -45,14 +47,13 @@
         <div class="box box1">
           <div class="bg-color">
             <div class="box-content">
-              <h3>
-                Why Join
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-                nobis delectus? Soluta perferendis optio, ullam sint placeat
-                magnam corporis totam voluptatem quo rem nemo dolorum provident
-                ipsam iure dolorem dolore.
+                <header class="heading-with-line">
+                  <h3>
+                    Why We Care
+                  </h3>
+                </header>
+                <p>
+                  There are an estimated <span class="emphasis"> <a href="https://www.prisonpolicy.org/reports/outofwork.html" class="credit" target="_blank">  5 million</a></span> formerly incarcerated people living in the U.S., and approximately <span class="emphasis"><a href="https://www.prisonpolicy.org/reports/outofwork.html" class="credit" target="_blank">27%</a></span> of those people are <span class="emphasis">unemployed</span>. That's nearly <span class="emphasis">5X the unployment rate </span> of the general United States population. 
               </p>
             </div>
           </div>
@@ -60,14 +61,13 @@
         <div class="box box2">
           <div class="bg-color">
             <div class="box-content">
+              <header class="heading-with-line">
               <h3>
-                Why Join
+                What We Do
               </h3>
+            </header>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-                nobis delectus? Soluta perferendis optio, ullam sint placeat
-                magnam corporis totam voluptatem quo rem nemo dolorum provident
-                ipsam iure dolorem dolore.
+                Prison employees build profiles for their most marketable inmates. Employers can then see those profiles and hire conscientious, skillful, dependable people for cheap.
               </p>
             </div>
           </div>
@@ -75,14 +75,13 @@
         <div class="box box3">
           <div class="bg-color">
             <div class="box-content">
+                <header class="heading-with-line">
               <h3>
-                Why Join
+                Did You Know?
               </h3>
+              </header>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-                nobis delectus? Soluta perferendis optio, ullam sint placeat
-                magnam corporis totam voluptatem quo rem nemo dolorum provident
-                ipsam iure dolorem dolore.
+                In a study by <a href="https://www.jailstojobs.org/tag/johns-hopkins-medicine/" class="credit" target="_blank">Johns Hopkins Hospitals,</a>  employees with a criminal background had a lower turnover rate than those with no criminal background.
               </p>
             </div>
           </div>
@@ -90,14 +89,15 @@
         <div class="box box4">
           <div class="bg-color">
             <div class="box-content">
+                <header class="heading-with-line">
               <h3>
-                Why Join
+                What Next
               </h3>
+              </header>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-                nobis delectus? Soluta perferendis optio, ullam sint placeat
-                magnam corporis totam voluptatem quo rem nemo dolorum provident
-                ipsam iure dolorem dolore.
+                The majority of people incarcerated in <span class="emphasis"><a href="https://www.prisonpolicy.org/reports/pie2018.html" class="credit"
+                  target="_blank">federal </a></span>prisons are convicted of <span class="emphasis"><a href="https://www.prisonpolicy.org/reports/pie2018.html" class="credit"
+                    target="_blank">non-violent</a></span> crimes. Almost <span class="emphasis"><a href="https://www.prisonpolicy.org/reports/pie2018.html" class="credit" target="_blank">11,000 </a></span> youth are imprisoned for offenses that <span class="emphasis">aren't even crimes. </span>Prisoners in the U.S. get a bad rap, but studies show they are willing to work, and they work hard. 
               </p>
             </div>
           </div>
@@ -105,18 +105,20 @@
       </section>
       <section class="cta">
         <div class="cta-content">
-          <h2>CTA</h2>
+          <header class="heading-with-line">
+          <h2>Ready to Find Work?</h2>
+        </header>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ea
-            atque illo error minus amet blanditiis dolor, vel aspernatur
-            consectetur laudantium distinctio aliquam, porro at. Delectus in
-            esse saepe libero.
+            <a href="https://www.latimes.com/opinion/op-ed/la-oe-bozelko-prison-labor-20171020-story.html" class="credit" target="_blank">Less than half </a>of the U.S. prison population is  employed. 
+            If you're a prison administrator who is ready to help your residents find good work, sign up or login below to get started.
           </p>
           <div class="button-area">
-            <a class="btn secondary-button">SIGN UP</button>
+            <a href="https://lambda-prisoner-skills.herokuapp.com/" class="btn secondary-button"
+            target="_blank">SIGN UP</button>
             <a
               href="https://lambda-prisoner-skills.herokuapp.com/"
               class="btn primary-button"
+              target="_blank"
               >LOGIN</a
             >
           </div>
@@ -138,8 +140,10 @@
         <a href="#" class="links">HOME</a>
         <a href="#" class="links">ABOUT</a>
         <a href="#" class="links">CONTACT</a>
-        <a class="btn primary-button">SIGN UP</a>
-        <a class="btn secondary-button">LOGIN</a>
+        <a href="https://lambda-prisoner-skills.herokuapp.com/" class="btn primary-button"
+        target="_blank">SIGN UP</a>
+        <a href="https://lambda-prisoner-skills.herokuapp.com/" class="btn secondary-button"
+        target="_blank">LOGIN</a>
       </div>
     </section>
   </body>

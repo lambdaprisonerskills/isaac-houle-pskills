@@ -23,13 +23,16 @@ body {
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.5rem;
+  @media @tablet {
+    font-size: 1.6rem;
+  }
 }
 .primary-button {
   background-color: white;
   color: @main-color;
 }
 
-secondary-button {
+.secondary-button {
   background: transparent;
   color: white;
   cursor: pointer;
@@ -38,4 +41,40 @@ secondary-button {
 
 .blur {
   filter: blur(10px);
+}
+
+.credit {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: @accent1;
+  }
+}
+
+.emphasis {
+  font-size: 2rem;
+  font-weight: bold;
+  @media @desktop {
+    font-size: 2.4rem;
+  }
+}
+.emphasis-light {
+  font-weight: bold;
+}
+
+.heading-with-line {
+  width: max-content;
+  h1,
+  h2,
+  h3 {
+    width: calc(100% + 2rem);
+    &:after {
+      content: "";
+      margin-top: 20px;
+      display: block;
+      height: 2px;
+      background: white;
+      width: 100%;
+    }
+  }
 }
