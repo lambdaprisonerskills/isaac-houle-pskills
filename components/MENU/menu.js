@@ -12,9 +12,11 @@ class Menu {
   }
   menuAppear() {
     this.element.style.display = "flex";
+    document.querySelector("main").classList.add("blur");
   }
   menuDisappear() {
     this.element.style.display = "none";
+    document.querySelector("main").classList.remove("blur");
   }
 }
 

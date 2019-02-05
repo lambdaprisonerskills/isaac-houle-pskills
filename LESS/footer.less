@@ -1,0 +1,44 @@
+footer {
+  background: @main-color;
+  padding: 10px 0 30px;
+  @media @desktop {
+    padding: 30px 0 50px;
+  }
+  .social-icons {
+    padding: 20px 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    @media @tablet {
+      width: 35%;
+      margin-left: 5%;
+    }
+    @media @desktop {
+      margin-left: 10%;
+      width: 18%;
+    }
+    i {
+      font-size: 2rem;
+      color: @main-color;
+      background: white;
+      border-radius: 50%;
+      display: inline-block;
+      width: 4rem;
+      padding: 1rem 0;
+      text-align: center;
+    }
+  }
+  p {
+    .font(1.6rem, 0, none);
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    @media @tablet {
+      text-align: left;
+      margin-left: 5%;
+    }
+    @media @desktop {
+      margin-left: 10%;
+    }
+  }
+}

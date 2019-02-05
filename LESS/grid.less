@@ -1,30 +1,98 @@
 .grid {
-  .custom-flex(center, center);
-  flex-wrap: wrap;
+  display: grid;
+  grid:
+    "box1" auto
+    "box2" auto
+    "box3" auto
+    "box4" auto/ 1fr;
+  @media @tablet {
+    grid:
+      "box1 box2" auto
+      "box3 box4" auto/ 1fr 1fr;
+  }
+  @media @desktop {
+    grid:
+      "box1 box1 box2" auto
+      "box3 box4 box4" auto/ 1fr 1fr 1fr;
+  }
   .box {
-    .custom-flex(center, center);
-    flex: 1 0 100%;
-    flex-wrap: wrap;
-    align-content: center;
-    height: 200px;
-    .box-content {
-      width: 80%;
-      margin: 20px 0;
+    .bg-color {
+      .custom-flex(flex-start, center);
+      flex-wrap: wrap;
+      align-content: center;
+      width: 100%;
+      height: 100%;
+      color: white;
+      .box-content {
+        width: 80%;
+        margin: 3rem;
+        h3 {
+          .font(1.8rem, 0, none);
+        }
+        p {
+          .font(1.6rem, 0, none);
+        }
+      }
+    }
+
+    &:nth-child(1n) .bg-color {
+      background: @accent1-translucent;
+      &:hover {
+        background: @banner-color;
+      }
+    }
+    &:nth-child(2n) .bg-color {
+      background: @accent2-translucent;
+      &:hover {
+        background: @banner-color;
+      }
+    }
+    &:nth-child(3n) .bg-color {
+      background: @accent3-translucent;
+      &:hover {
+        background: @banner-color;
+      }
+    }
+    &:nth-child(4n) .bg-color {
+      background: @accent4-translucent;
+      &:hover {
+        background: @banner-color;
+      }
     }
     @media @tablet {
-      flex: 1 0 30%;
+      flex: 1 0 50%;
     }
-    &:nth-child(1n) {
-      background: @accent1;
+  }
+  .box1 {
+    grid-area: box1;
+    background: url("/img/hands-joined.jpeg");
+    .img-bg;
+    @media @desktop {
+      flex: 1 0 40%;
     }
-    &:nth-child(2n) {
-      background: @accent2;
+  }
+  .box2 {
+    grid-area: box2;
+    background: url("/img/person-leaning.jpeg");
+    .img-bg;
+    @media @desktop {
+      flex: 1 0 60%;
     }
-    &:nth-child(3n) {
-      background: @accent3;
+  }
+  .box3 {
+    grid-area: box3;
+    background: url("/img/two-workers.jpeg");
+    .img-bg;
+    @media @desktop {
+      flex: 1 0 60%;
     }
-    &:nth-child(4n) {
-      background: @accent4;
+  }
+  .box4 {
+    grid-area: box4;
+    background: url("/img/person-jumping.jpg");
+    .img-bg;
+    @media @desktop {
+      flex: 1 0 40%;
     }
   }
 }

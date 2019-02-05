@@ -5,29 +5,35 @@ header {
   width: 100%;
   height: 60vh;
   color: white;
+  nav {
+    .custom-flex(space-between, center);
+    background: @banner-color;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 40px;
+    i {
+      font-size: 2.4rem;
+      color: white;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    a {
+      background: white;
+      font-size: 1.2rem;
+      color: @main-color;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px;
+      margin-left: 10px;
+    }
+  }
   .bg-color {
     background: @banner-color;
-    height: 100%;
-    nav {
-      .custom-flex(space-between, center);
-      padding-top: 10px;
-      position: fixed;
-      width: 100%;
-      i {
-        font-size: 2.4rem;
-        color: white;
-        margin-right: 10px;
-      }
-      a {
-        background: white;
-        font-size: 1.2rem;
-        color: @main-color;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 5px;
-        margin-left: 10px;
-      }
-    }
+    height: calc(100% - 40px);
+    position: relative;
+    top: 40px;
     .text {
       .custom-flex(flex-start, center);
       align-content: center;
@@ -35,6 +41,9 @@ header {
       width: 90%;
       height: 100%;
       margin: 0 auto;
+      @media @desktop {
+        width: 80%;
+      }
       h1 {
         .font(2.4rem, 20px 0, 1px solid white);
         width: 100%;

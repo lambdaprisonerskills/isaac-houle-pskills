@@ -136,6 +136,7 @@ table {
 }
 html {
   font-size: 62.5%;
+  letter-spacing: 0.05rem;
   height: 100%;
   width: 100%;
 }
@@ -158,6 +159,9 @@ body {
   padding: 10px 30px;
   margin: 30px 0;
 }
+.blur {
+  filter: blur(10px);
+}
 header {
   background-image: url("/img/working-together2.jpeg");
   background-position: center center;
@@ -168,24 +172,24 @@ header {
   height: 60vh;
   color: white;
 }
-header .bg-color {
-  background: rgba(36, 41, 67, 0.85);
-  height: 100%;
-}
-header .bg-color nav {
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  background: rgba(36, 41, 67, 0.9);
+  padding: 10px 0;
   position: fixed;
   width: 100%;
+  z-index: 1;
+  height: 40px;
 }
-header .bg-color nav i {
+header nav i {
   font-size: 2.4rem;
   color: white;
   margin-right: 10px;
+  cursor: pointer;
 }
-header .bg-color nav a {
+header nav a {
   background: white;
   font-size: 1.2rem;
   color: #242943;
@@ -193,6 +197,12 @@ header .bg-color nav a {
   font-weight: bold;
   padding: 5px;
   margin-left: 10px;
+}
+header .bg-color {
+  background: rgba(36, 41, 67, 0.9);
+  height: calc(100% - 40px);
+  position: relative;
+  top: 40px;
 }
 header .bg-color .text {
   display: flex;
@@ -203,6 +213,11 @@ header .bg-color .text {
   width: 90%;
   height: 100%;
   margin: 0 auto;
+}
+@media (min-width: 1000px) {
+  header .bg-color .text {
+    width: 80%;
+  }
 }
 header .bg-color .text h1 {
   font-size: 2.4rem;
@@ -215,71 +230,165 @@ header .bg-color .text p {
   width: 100%;
   margin: 10px 0 0;
 }
-.about {
-  background: #242943;
+.cta {
+  background: #2b3150;
   color: white;
 }
-.about .about-content {
+.cta .cta-content {
   width: 90%;
   margin: 0 auto;
 }
-.about .about-content h2 {
+@media (min-width: 1000px) {
+  .cta .cta-content {
+    width: 80%;
+  }
+}
+.cta .cta-content h2 {
   font-size: 1.8rem;
   padding: 20px 0 15px;
   border-bottom: 1px solid white;
   width: 30%;
 }
-.about .about-content p {
+.cta .cta-content p {
   font-size: 1.6rem;
   padding: 20px 0 0;
   border-bottom: none;
 }
-.about .about-content .button-area {
+.cta .cta-content .button-area {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.about .about-content .button-area button {
+@media (min-width: 500px) {
+  .cta .cta-content .button-area {
+    width: 70%;
+  }
+}
+@media (min-width: 1000px) {
+  .cta .cta-content .button-area {
+    width: 50%;
+  }
+}
+.cta .cta-content .button-area button {
   width: 45%;
 }
 .grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid: "box1" auto "box2" auto "box3" auto "box4" auto / 1fr;
 }
-.grid .box {
+@media (min-width: 500px) {
+  .grid {
+    grid: "box1 box2" auto "box3 box4" auto / 1fr 1fr;
+  }
+}
+@media (min-width: 1000px) {
+  .grid {
+    grid: "box1 box1 box2" auto "box3 box4 box4" auto / 1fr 1fr 1fr;
+  }
+}
+.grid .box .bg-color {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex: 1 0 100%;
   flex-wrap: wrap;
   align-content: center;
-  height: 200px;
+  width: 100%;
+  height: 100%;
+  color: white;
 }
-.grid .box .box-content {
+.grid .box .bg-color .box-content {
   width: 80%;
-  margin: 20px 0;
+  margin: 3rem;
+}
+.grid .box .bg-color .box-content h3 {
+  font-size: 1.8rem;
+  padding: 0;
+  border-bottom: none;
+}
+.grid .box .bg-color .box-content p {
+  font-size: 1.6rem;
+  padding: 0;
+  border-bottom: none;
+}
+.grid .box:nth-child(1n) .bg-color {
+  background: rgba(111, 195, 223, 0.9);
+}
+.grid .box:nth-child(1n) .bg-color:hover {
+  background: rgba(36, 41, 67, 0.9);
+}
+.grid .box:nth-child(2n) .bg-color {
+  background: rgba(141, 130, 196, 0.9);
+}
+.grid .box:nth-child(2n) .bg-color:hover {
+  background: rgba(36, 41, 67, 0.9);
+}
+.grid .box:nth-child(3n) .bg-color {
+  background: rgba(236, 141, 129, 0.9);
+}
+.grid .box:nth-child(3n) .bg-color:hover {
+  background: rgba(36, 41, 67, 0.9);
+}
+.grid .box:nth-child(4n) .bg-color {
+  background: rgba(231, 183, 136, 0.9);
+}
+.grid .box:nth-child(4n) .bg-color:hover {
+  background: rgba(36, 41, 67, 0.9);
 }
 @media (min-width: 500px) {
   .grid .box {
-    flex: 1 0 30%;
+    flex: 1 0 50%;
   }
 }
-.grid .box:nth-child(1n) {
-  background: #6fc3df;
+.grid .box1 {
+  grid-area: box1;
+  background: url("/img/hands-joined.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.grid .box:nth-child(2n) {
-  background: #8d82c4;
+@media (min-width: 1000px) {
+  .grid .box1 {
+    flex: 1 0 40%;
+  }
 }
-.grid .box:nth-child(3n) {
-  background: #ec8d81;
+.grid .box2 {
+  grid-area: box2;
+  background: url("/img/person-leaning.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.grid .box:nth-child(4n) {
-  background: #e7b788;
+@media (min-width: 1000px) {
+  .grid .box2 {
+    flex: 1 0 60%;
+  }
+}
+.grid .box3 {
+  grid-area: box3;
+  background: url("/img/two-workers.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1000px) {
+  .grid .box3 {
+    flex: 1 0 60%;
+  }
+}
+.grid .box4 {
+  grid-area: box4;
+  background: url("/img/person-jumping.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1000px) {
+  .grid .box4 {
+    flex: 1 0 40%;
+  }
 }
 .menu {
-  background: rgba(36, 41, 67, 0.85);
+  background: rgba(36, 41, 67, 0.9);
   height: 100%;
   width: 100%;
   position: fixed;
@@ -290,6 +399,7 @@ header .bg-color .text p {
   flex-wrap: wrap;
   align-content: center;
   display: none;
+  z-index: 999;
 }
 .menu .close {
   color: white;
@@ -297,6 +407,7 @@ header .bg-color .text p {
   position: fixed;
   top: 10px;
   right: 10px;
+  cursor: pointer;
 }
 .menu .menu-content {
   width: 90%;
@@ -304,6 +415,16 @@ header .bg-color .text p {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+@media (min-width: 500px) {
+  .menu .menu-content {
+    width: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  .menu .menu-content {
+    width: 40%;
+  }
 }
 .menu .menu-content a {
   font-size: 1.6rem;
@@ -322,4 +443,60 @@ header .bg-color .text p {
   margin: 20px 0 0;
   font-weight: bold;
   width: 100%;
+}
+footer {
+  background: #242943;
+  padding: 10px 0 30px;
+}
+@media (min-width: 1000px) {
+  footer {
+    padding: 30px 0 50px;
+  }
+}
+footer .social-icons {
+  padding: 20px 0;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+@media (min-width: 500px) {
+  footer .social-icons {
+    width: 35%;
+    margin-left: 5%;
+  }
+}
+@media (min-width: 1000px) {
+  footer .social-icons {
+    margin-left: 10%;
+    width: 18%;
+  }
+}
+footer .social-icons i {
+  font-size: 2rem;
+  color: #242943;
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+  width: 4rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+footer p {
+  font-size: 1.6rem;
+  padding: 0;
+  border-bottom: none;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+@media (min-width: 500px) {
+  footer p {
+    text-align: left;
+    margin-left: 5%;
+  }
+}
+@media (min-width: 1000px) {
+  footer p {
+    margin-left: 10%;
+  }
 }

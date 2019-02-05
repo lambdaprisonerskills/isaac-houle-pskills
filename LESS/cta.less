@@ -1,9 +1,12 @@
-.about {
-  background: @main-color;
+.cta {
+  background: @main-color-light;
   color: white;
-  .about-content {
+  .cta-content {
     width: 90%;
     margin: 0 auto;
+    @media @desktop {
+      width: 80%;
+    }
     h2 {
       .font(1.8rem, 20px 0 15px, 1px solid white);
       width: 30%;
@@ -13,6 +16,12 @@
     }
     .button-area {
       .custom-flex(space-between, center);
+      @media @tablet {
+        width: 70%;
+      }
+      @media @desktop {
+        width: 50%;
+      }
       button {
         width: 45%;
       }
