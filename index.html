@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="css/index.css" />
     <script src="./components/Menu/menu.js" async></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" async></script>
 
     <title>Prisoner Skills</title>
   </head>
@@ -24,7 +24,7 @@
     <main>
       <header>
         <nav>
-          <a href="#"> Prisoner Skills </a>
+          <a href="#" class="logo"> Prisoner Skills </a>
           <i class="fas fa-bars menu-button"></i>
         </nav>
         <div class="bg-color">
@@ -36,7 +36,7 @@
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa,
               consequuntur eius!
             </p>
-            <button class="secondary-button">GET STARTED</button>
+            <a class="btn secondary-button">GET STARTED</a>
           </div>
         </div>
       </header>
@@ -113,8 +113,12 @@
             esse saepe libero.
           </p>
           <div class="button-area">
-            <button class="secondary-button">SIGN UP</button>
-            <button class="primary-button">LOGIN</button>
+            <a class="btn secondary-button">SIGN UP</button>
+            <a
+              href="https://lambda-prisoner-skills.herokuapp.com/"
+              class="btn primary-button"
+              >LOGIN</a
+            >
           </div>
         </div>
       </section>
@@ -131,11 +135,11 @@
     <section class="menu">
       <i class="fas fa-times close"></i>
       <div class="menu-content">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">CONTACT</a>
-        <button class="primary-button">SIGN UP</button>
-        <button class="secondary-button">LOGIN</button>
+        <a href="#" class="links">HOME</a>
+        <a href="#" class="links">ABOUT</a>
+        <a href="#" class="links">CONTACT</a>
+        <a class="btn primary-button">SIGN UP</a>
+        <a class="btn secondary-button">LOGIN</a>
       </div>
     </section>
   </body>

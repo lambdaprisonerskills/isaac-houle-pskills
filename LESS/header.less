@@ -19,7 +19,7 @@ header {
       margin-right: 10px;
       cursor: pointer;
     }
-    a {
+    .logo {
       background: white;
       font-size: 1.2rem;
       color: @main-color;
@@ -52,6 +52,15 @@ header {
         font-size: 1.6rem;
         width: 100%;
         margin: 10px 0 0;
+      }
+      a {
+        width: 60%;
+        @media @tablet {
+          width: 40%;
+        }
+        @media @desktop {
+          width: 20%;
+        }
       }
     }
   }
