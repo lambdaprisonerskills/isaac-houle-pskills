@@ -3,7 +3,7 @@ let bars = document.querySelector("nav .menu-button");
 let headerContent = document.querySelector(".header-content");
 
 let timeIncrement = 0;
-console.log(boxes);
+
 function headerContentFadeIn() {
   TweenMax.fromTo(
     headerContent,

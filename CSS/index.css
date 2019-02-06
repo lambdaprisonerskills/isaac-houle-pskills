@@ -145,19 +145,20 @@ body {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   line-height: 1.5;
 }
-.btn {
+.styled-button {
   display: block;
   border: 1px solid white;
   cursor: pointer;
   font-size: 1.4rem;
-  padding: 10px 0 10px 1.2rem;
+  padding: 10px 0;
+  text-align: center;
   margin: 30px 0;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.5rem;
 }
 @media (min-width: 800px) {
-  .btn {
+  .styled-button {
     font-size: 1.6rem;
   }
 }
@@ -181,17 +182,14 @@ body {
 .credit:hover {
   color: #6fc3df;
 }
-.emphasis {
+strong {
   font-size: 2rem;
   font-weight: bold;
 }
 @media (min-width: 1000px) {
-  .emphasis {
+  strong {
     font-size: 2.4rem;
   }
-}
-.emphasis-light {
-  font-weight: bold;
 }
 .heading-with-line {
   width: max-content;
@@ -211,22 +209,38 @@ body {
   background: white;
   width: 100%;
 }
-header.banner {
-  background-image: url("/img/working-together2.jpeg");
+.banner {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
-  height: 60vh;
   color: white;
 }
+.banner.index-banner {
+  background-image: url("/img/working-together2.jpeg");
+  height: 60vh;
+}
 @media (min-width: 500px) {
-  header.banner {
+  .banner.index-banner {
     height: 80vh;
   }
 }
-header.banner nav {
+.banner.about-banner {
+  background-image: url("/img/working-together-3.jpg");
+  height: 40vh;
+}
+@media (min-width: 500px) {
+  .banner.about-banner {
+    height: 60vh;
+  }
+}
+@media (min-width: 800px) {
+  .banner.about-banner {
+    height: 40vh;
+  }
+}
+.banner nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -237,13 +251,13 @@ header.banner nav {
   z-index: 1;
   height: 40px;
 }
-header.banner nav i {
+.banner nav i {
   font-size: 2.4rem;
   color: white;
   margin-right: 10px;
   cursor: pointer;
 }
-header.banner nav .logo {
+.banner nav .logo {
   background: white;
   font-size: 1.2rem;
   color: #242943;
@@ -252,13 +266,13 @@ header.banner nav .logo {
   padding: 5px;
   margin-left: 10px;
 }
-header.banner .banner-color {
+.banner .banner-color {
   background: rgba(36, 41, 67, 0.9);
   height: calc(100% - 40px);
   position: relative;
   top: 40px;
 }
-header.banner .banner-color .header-content {
+.banner .banner-color .header-content {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -270,46 +284,46 @@ header.banner .banner-color .header-content {
   margin: 0 auto;
 }
 @media (min-width: 1000px) {
-  header.banner .banner-color .header-content {
+  .banner .banner-color .header-content {
     width: 80%;
   }
 }
-header.banner .banner-color .header-content h1 {
+.banner .banner-color .header-content h1 {
   font-size: 2.4rem;
   padding: 20px 0;
   border-bottom: 1px solid white;
   width: 100%;
 }
 @media (min-width: 800px) {
-  header.banner .banner-color .header-content h1 {
+  .banner .banner-color .header-content h1 {
     font-size: 3rem;
   }
 }
-header.banner .banner-color .header-content p {
+.banner .banner-color .header-content p {
   font-size: 1.6rem;
   width: 100%;
   margin: 10px 0 0;
 }
 @media (min-width: 800px) {
-  header.banner .banner-color .header-content p {
+  .banner .banner-color .header-content p {
     font-size: 1.8rem;
   }
 }
-header.banner .banner-color .header-content a {
+.banner .banner-color .header-content a {
   width: 60%;
 }
 @media (min-width: 500px) {
-  header.banner .banner-color .header-content a {
+  .banner .banner-color .header-content a {
     width: 40%;
   }
 }
 @media (min-width: 800px) {
-  header.banner .banner-color .header-content a {
+  .banner .banner-color .header-content a {
     width: 30%;
   }
 }
 @media (min-width: 1000px) {
-  header.banner .banner-color .header-content a {
+  .banner .banner-color .header-content a {
     width: 20%;
   }
 }
@@ -367,27 +381,60 @@ header.banner .banner-color .header-content a {
 }
 .grid {
   display: grid;
+}
+.grid.index-grid {
   grid: "box1" auto "box2" auto "box3" auto "box4" auto / 1fr;
 }
 @media (min-width: 500px) {
-  .grid {
+  .grid.index-grid {
     grid: "box1 box2" auto "box3 box4" auto / 1fr 1fr;
   }
 }
 @media (min-width: 1000px) {
-  .grid {
+  .grid.index-grid {
     grid: "box1 box1 box2" auto "box3 box4 box4" auto / 1fr 1fr 1fr;
   }
 }
+.grid.about-grid {
+  grid: "box1" auto "box2" auto "box3" auto "box4" auto "box5" auto "box6" auto / 1fr;
+}
+@media (min-width: 500px) {
+  .grid.about-grid {
+    grid: "box1 box2" auto "box3 box4" auto "box5 box6" auto / 1fr 1fr;
+  }
+}
+@media (min-width: 1000px) {
+  .grid.about-grid {
+    grid: "box1 box2 box3" auto "box4 box5 box6" auto / 1fr 1fr 1fr;
+  }
+}
 .grid .box .bg-color {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   flex-wrap: wrap;
   align-content: center;
   width: 100%;
   height: 100%;
   color: white;
+  transition: background 0.4s;
+}
+.grid .box .bg-color.info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.grid .box .bg-color.team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.grid .box .bg-color.team h3 {
+  margin-left: -1rem;
+}
+.grid .box .bg-color.team .box-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .grid .box .bg-color .box-content {
   width: 80%;
@@ -414,34 +461,26 @@ header.banner .banner-color .header-content a {
     font-size: 2rem;
   }
 }
+.grid .box .bg-color .box-content img {
+  border-radius: 50%;
+}
 .grid .box:nth-child(1n) .bg-color {
   background: rgba(111, 195, 223, 0.9);
-}
-.grid .box:nth-child(1n) .bg-color:hover {
-  background: rgba(36, 41, 67, 0.9);
 }
 .grid .box:nth-child(2n) .bg-color {
   background: rgba(141, 130, 196, 0.9);
 }
-.grid .box:nth-child(2n) .bg-color:hover {
-  background: rgba(36, 41, 67, 0.9);
-}
 .grid .box:nth-child(3n) .bg-color {
   background: rgba(236, 141, 129, 0.9);
-}
-.grid .box:nth-child(3n) .bg-color:hover {
-  background: rgba(36, 41, 67, 0.9);
 }
 .grid .box:nth-child(4n) .bg-color {
   background: rgba(231, 183, 136, 0.9);
 }
-.grid .box:nth-child(4n) .bg-color:hover {
-  background: rgba(36, 41, 67, 0.9);
+.grid .box:nth-child(5n) .bg-color {
+  background: rgba(142, 169, 232, 0.9);
 }
-@media (min-width: 500px) {
-  .grid .box {
-    flex: 1 0 50%;
-  }
+.grid .box:nth-child(6n) .bg-color {
+  background: rgba(135, 197, 164, 0.9);
 }
 .grid .box1 {
   grid-area: box1;
@@ -450,22 +489,12 @@ header.banner .banner-color .header-content a {
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media (min-width: 1000px) {
-  .grid .box1 {
-    flex: 1 0 40%;
-  }
-}
 .grid .box2 {
   grid-area: box2;
   background: url("/img/person-leaning.jpeg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-@media (min-width: 1000px) {
-  .grid .box2 {
-    flex: 1 0 60%;
-  }
 }
 .grid .box3 {
   grid-area: box3;
@@ -474,11 +503,6 @@ header.banner .banner-color .header-content a {
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media (min-width: 1000px) {
-  .grid .box3 {
-    flex: 1 0 60%;
-  }
-}
 .grid .box4 {
   grid-area: box4;
   background: url("/img/person-jumping.jpg");
@@ -486,10 +510,19 @@ header.banner .banner-color .header-content a {
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media (min-width: 1000px) {
-  .grid .box4 {
-    flex: 1 0 40%;
-  }
+.grid .box5 {
+  grid-area: box5;
+  background: url("/img/construction-site.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.grid .box6 {
+  grid-area: box6;
+  background: url("/img/food-service.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .menu {
   background: rgba(36, 41, 67, 0.9);
@@ -540,7 +573,7 @@ header.banner .banner-color .header-content a {
   width: 100%;
   text-align: center;
 }
-.menu .menu-content .btn {
+.menu .menu-content .styled-button {
   font-size: 1.6rem;
   padding: 15px 0;
   border-bottom: 1px solid white;
@@ -549,7 +582,7 @@ header.banner .banner-color .header-content a {
   width: 100%;
   text-align: center;
 }
-.menu .menu-content .btn:last-child {
+.menu .menu-content .styled-button:last-child {
   color: white;
 }
 footer {

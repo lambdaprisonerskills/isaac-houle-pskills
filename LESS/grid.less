@@ -1,28 +1,64 @@
 .grid {
   display: grid;
-  grid:
-    "box1" auto
-    "box2" auto
-    "box3" auto
-    "box4" auto/ 1fr;
-  @media @landscape {
+  &.index-grid {
     grid:
-      "box1 box2" auto
-      "box3 box4" auto/ 1fr 1fr;
+      "box1" auto
+      "box2" auto
+      "box3" auto
+      "box4" auto/ 1fr;
+    @media @landscape {
+      grid:
+        "box1 box2" auto
+        "box3 box4" auto/ 1fr 1fr;
+    }
+    @media @desktop {
+      grid:
+        "box1 box1 box2" auto
+        "box3 box4 box4" auto/ 1fr 1fr 1fr;
+    }
   }
-  @media @desktop {
+  &.about-grid {
     grid:
-      "box1 box1 box2" auto
-      "box3 box4 box4" auto/ 1fr 1fr 1fr;
+      "box1" auto
+      "box2" auto
+      "box3" auto
+      "box4" auto
+      "box5" auto
+      "box6" auto/ 1fr;
+    @media @landscape {
+      grid:
+        "box1 box2" auto
+        "box3 box4" auto
+        "box5 box6" auto/ 1fr 1fr;
+    }
+    @media @desktop {
+      grid:
+        "box1 box2 box3" auto
+        "box4 box5 box6" auto/ 1fr 1fr 1fr;
+    }
   }
   .box {
     .bg-color {
-      .custom-flex(flex-start, center);
       flex-wrap: wrap;
       align-content: center;
       width: 100%;
       height: 100%;
       color: white;
+      transition: background 0.4s;
+      &.info {
+        .custom-flex(flex-start, center);
+      }
+      &.team {
+        .custom-flex(center, center);
+        text-align: center;
+        h3 {
+          margin-left: -1rem;
+        }
+        .box-content {
+          .custom-flex(center, center);
+          flex-direction: column;
+        }
+      }
       .box-content {
         width: 80%;
         margin: 3rem;
@@ -39,67 +75,59 @@
             font-size: 2rem;
           }
         }
+        img {
+          border-radius: 50%;
+        }
       }
     }
 
     &:nth-child(1n) .bg-color {
       background: @accent1-translucent;
-      &:hover {
-        background: @banner-color;
-      }
     }
     &:nth-child(2n) .bg-color {
       background: @accent2-translucent;
-      &:hover {
-        background: @banner-color;
-      }
     }
     &:nth-child(3n) .bg-color {
       background: @accent3-translucent;
-      &:hover {
-        background: @banner-color;
-      }
     }
     &:nth-child(4n) .bg-color {
       background: @accent4-translucent;
-      &:hover {
-        background: @banner-color;
-      }
     }
-    @media @landscape {
-      flex: 1 0 50%;
+    &:nth-child(5n) .bg-color {
+      background: @accent5-translucent;
+    }
+    &:nth-child(6n) .bg-color {
+      background: @accent6-translucent;
     }
   }
   .box1 {
     grid-area: box1;
     background: url("/img/hands-joined.jpeg");
     .img-bg;
-    @media @desktop {
-      flex: 1 0 40%;
-    }
   }
   .box2 {
     grid-area: box2;
     background: url("/img/person-leaning.jpeg");
     .img-bg;
-    @media @desktop {
-      flex: 1 0 60%;
-    }
   }
   .box3 {
     grid-area: box3;
     background: url("/img/two-workers.jpeg");
     .img-bg;
-    @media @desktop {
-      flex: 1 0 60%;
-    }
   }
   .box4 {
     grid-area: box4;
     background: url("/img/person-jumping.jpg");
     .img-bg;
-    @media @desktop {
-      flex: 1 0 40%;
-    }
+  }
+  .box5 {
+    grid-area: box5;
+    background: url("/img/construction-site.jpeg");
+    .img-bg;
+  }
+  .box6 {
+    grid-area: box6;
+    background: url("/img/food-service.jpeg");
+    .img-bg;
   }
 }
