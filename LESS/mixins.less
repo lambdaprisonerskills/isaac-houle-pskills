@@ -8,7 +8,17 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.font(@size, @padding) {
-  font-size: @size;
-  padding: @padding;
+.w-100() {
+  width: 100%;
+}
+.dimensions(@width, @height) {
+  width: @width;
+  height: @height;
+}
+.background-transition() {
+  transition: background 0.4s;
+}
+
+.block-center(@yMargin) {
+  margin: @yMargin auto;
 }

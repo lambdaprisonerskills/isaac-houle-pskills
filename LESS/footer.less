@@ -14,23 +14,29 @@ footer {
       width: 35%;
       margin-left: 5%;
     }
+    @media @tablet {
+      width: 25%;
+    }
     @media @desktop {
       margin-left: 10%;
       width: 18%;
     }
     i {
-      font-size: 2rem;
+      font-size: @medium-text;
       color: @main-color;
       background: white;
       border-radius: 50%;
-      display: inline-block;
       width: 4rem;
       padding: 1rem 0;
       text-align: center;
+      .background-transition;
+      &:hover {
+        background: @accent1;
+      }
     }
   }
   p {
-    .font(1.6rem, 0);
+    font-size: @small-text;
     color: rgba(255, 255, 255, 0.5);
     text-align: center;
     @media @landscape {

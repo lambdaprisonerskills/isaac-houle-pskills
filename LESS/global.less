@@ -4,38 +4,44 @@
 html {
   font-size: 62.5%;
   letter-spacing: 0.05rem;
-  height: 100%;
-  width: 100%;
+  .dimensions(100%, 100%);
 }
 html,
 body {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: @main-font;
   line-height: 1.5;
 }
 
 .styled-button {
-  display: block;
   border: 1px solid white;
   cursor: pointer;
-  font-size: 1.4rem;
+  font-size: @extra-small-text;
   padding: 10px 0;
   text-align: center;
   margin: 30px 0;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.5rem;
-  @media @tablet {
-    font-size: 1.6rem;
-  }
+  .background-transition;
 }
 .primary-button {
   background-color: white;
   color: @main-color;
+  &:hover {
+    border: 1px solid @accent1;
+    background: @main-color;
+    color: @accent1;
+  }
 }
 
 .secondary-button {
   background: transparent;
   color: white;
+  &:hover {
+    background: @accent1;
+    border: 1px solid @accent1;
+    color: @main-color;
+  }
 }
 
 .blur {
@@ -51,11 +57,8 @@ body {
 }
 
 strong {
-  font-size: 2rem;
+  font-size: @large-text;
   font-weight: bold;
-  @media @desktop {
-    font-size: 2.4rem;
-  }
 }
 
 .heading-with-line {
@@ -63,14 +66,14 @@ strong {
   h1,
   h2,
   h3 {
-    width: calc(100% + 2rem);
+    width: calc(100% + 1rem);
     &:after {
       content: "";
       margin-top: 20px;
       display: block;
       height: 2px;
       background: white;
-      width: 100%;
+      .w-100;
     }
   }
 }

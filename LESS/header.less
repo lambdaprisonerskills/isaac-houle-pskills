@@ -1,12 +1,18 @@
 .banner {
   .img-bg;
   background-attachment: fixed;
-  width: 100%;
+  .w-100;
   color: white;
   &.index-banner {
     background-image: @index-banner-img;
     height: 60vh;
     @media @landscape {
+      height: 80vh;
+    }
+    @media @tablet {
+      height: 60vh;
+    }
+    @media @desktop {
       height: 80vh;
     }
   }
@@ -19,29 +25,40 @@
     @media @tablet {
       height: 40vh;
     }
+    @media @desktop {
+      height: 60vh;
+    }
   }
   nav {
     .custom-flex(space-between, center);
+    .w-100;
     background: @banner-color;
     padding: 10px 0;
     position: fixed;
-    width: 100%;
     z-index: 1;
     height: 40px;
     i {
-      font-size: 2.4rem;
+      font-size: @large-text;
       color: white;
       margin-right: 10px;
       cursor: pointer;
+      transition: color 0.4s;
+      &:hover {
+        color: @accent1;
+      }
     }
     .logo {
       background: white;
-      font-size: 1.2rem;
+      font-size: @extra-small-text;
       color: @main-color;
       text-decoration: none;
       font-weight: bold;
       padding: 5px;
       margin-left: 10px;
+      .background-transition;
+      &:hover {
+        background: @accent1;
+      }
     }
   }
   .banner-color {
@@ -51,26 +68,26 @@
     top: 40px;
     .header-content {
       .custom-flex(flex-start, center);
+      .dimensions(90%, 100%);
       position: relative;
       align-content: center;
       flex-wrap: wrap;
-      width: 90%;
-      height: 100%;
       margin: 0 auto;
       @media @desktop {
         width: 80%;
       }
       h1 {
-        .font(2.4rem, 20px 0);
+        font-size: @large-text;
+        padding: 20px 0;
         border-bottom: 1px solid white;
-        width: 100%;
+        .w-100;
         @media @tablet {
-          font-size: 3rem;
+          font-size: @extra-large-text;
         }
       }
       p {
-        font-size: 1.6rem;
-        width: 100%;
+        font-size: @medium-text;
+        .w-100;
         margin: 10px 0 0;
         @media @tablet {
           font-size: 1.8rem;
