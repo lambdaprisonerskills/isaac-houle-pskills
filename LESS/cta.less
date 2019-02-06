@@ -1,6 +1,6 @@
 .cta {
   background: @main-color-light;
-  color: white;
+  // color: white;
   padding: 20px 0 20px;
   .cta-content {
     width: 90%;
@@ -9,15 +9,13 @@
       width: 80%;
     }
     h2 {
-      font-size: @large-text;
       padding: 20px 0 15px;
     }
     p {
-      font-size: @medium-text;
       padding: 20px 0 0;
     }
     .button-area {
-      .custom-flex(space-between, center);
+      .custom-flex(space-between, center, wrap);
       @media @landscape {
         width: 70%;
       }

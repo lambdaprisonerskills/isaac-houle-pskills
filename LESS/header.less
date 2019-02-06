@@ -2,7 +2,6 @@
   .img-bg;
   background-attachment: fixed;
   .w-100;
-  color: white;
   &.index-banner {
     background-image: @index-banner-img;
     height: 60vh;
@@ -30,7 +29,7 @@
     }
   }
   nav {
-    .custom-flex(space-between, center);
+    .custom-flex(space-between, center, wrap);
     .w-100;
     background: @banner-color;
     padding: 10px 0;
@@ -39,7 +38,6 @@
     height: 40px;
     i {
       font-size: @large-text;
-      color: white;
       margin-right: 10px;
       cursor: pointer;
       transition: color 0.4s;
@@ -67,31 +65,25 @@
     position: relative;
     top: 40px;
     .header-content {
-      .custom-flex(flex-start, center);
-      .dimensions(90%, 100%);
-      position: relative;
+      .custom-flex(flex-start, center, wrap);
       align-content: center;
-      flex-wrap: wrap;
-      margin: 0 auto;
+      .dimensions(90%, 100%);
+      .block-center(0);
+      position: relative;
       @media @desktop {
         width: 80%;
       }
       h1 {
-        font-size: @large-text;
+        .w-100;
         padding: 20px 0;
         border-bottom: 1px solid white;
-        .w-100;
         @media @tablet {
           font-size: @extra-large-text;
         }
       }
       p {
-        font-size: @medium-text;
         .w-100;
         margin: 10px 0 0;
-        @media @tablet {
-          font-size: 1.8rem;
-        }
       }
       a {
         width: 60%;

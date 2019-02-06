@@ -144,6 +144,26 @@ html,
 body {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   line-height: 1.5;
+  color: white;
+}
+h1 {
+  font-size: 3rem;
+}
+h2,
+h3 {
+  font-size: 2.4rem;
+}
+p,
+i {
+  font-size: 2rem;
+}
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+strong {
+  font-size: 2.4rem;
+  font-weight: 600;
 }
 .styled-button {
   border: 1px solid white;
@@ -152,8 +172,6 @@ body {
   padding: 10px 0;
   text-align: center;
   margin: 30px 0;
-  text-decoration: none;
-  font-weight: 600;
   letter-spacing: 0.5rem;
   transition: background 0.4s;
 }
@@ -178,17 +196,6 @@ body {
 .blur {
   filter: blur(10px);
 }
-.credit {
-  color: white;
-  text-decoration: none;
-}
-.credit:hover {
-  color: #6fc3df;
-}
-strong {
-  font-size: 2.4rem;
-  font-weight: bold;
-}
 .heading-with-line {
   width: max-content;
 }
@@ -207,13 +214,19 @@ strong {
   background: white;
   width: 100%;
 }
+.credit {
+  color: white;
+  text-decoration: none;
+}
+.credit:hover {
+  color: #6fc3df;
+}
 .banner {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
-  color: white;
 }
 .banner.index-banner {
   background-image: url("/img/working-together2.jpeg");
@@ -257,6 +270,7 @@ strong {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   background: rgba(36, 41, 67, 0.9);
   padding: 10px 0;
@@ -266,7 +280,6 @@ strong {
 }
 .banner nav i {
   font-size: 2.4rem;
-  color: white;
   margin-right: 10px;
   cursor: pointer;
   transition: color 0.4s;
@@ -297,12 +310,12 @@ strong {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
   width: 90%;
   height: 100%;
-  position: relative;
-  align-content: center;
-  flex-wrap: wrap;
   margin: 0 auto;
+  position: relative;
 }
 @media (min-width: 1000px) {
   .banner .banner-color .header-content {
@@ -310,10 +323,9 @@ strong {
   }
 }
 .banner .banner-color .header-content h1 {
-  font-size: 2.4rem;
+  width: 100%;
   padding: 20px 0;
   border-bottom: 1px solid white;
-  width: 100%;
 }
 @media (min-width: 800px) {
   .banner .banner-color .header-content h1 {
@@ -321,14 +333,8 @@ strong {
   }
 }
 .banner .banner-color .header-content p {
-  font-size: 2rem;
   width: 100%;
   margin: 10px 0 0;
-}
-@media (min-width: 800px) {
-  .banner .banner-color .header-content p {
-    font-size: 1.8rem;
-  }
 }
 .banner .banner-color .header-content a {
   width: 60%;
@@ -350,7 +356,6 @@ strong {
 }
 .cta {
   background: #2b3150;
-  color: white;
   padding: 20px 0 20px;
 }
 .cta .cta-content {
@@ -363,17 +368,16 @@ strong {
   }
 }
 .cta .cta-content h2 {
-  font-size: 2.4rem;
   padding: 20px 0 15px;
 }
 .cta .cta-content p {
-  font-size: 2rem;
   padding: 20px 0 0;
 }
 .cta .cta-content .button-area {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 @media (min-width: 500px) {
   .cta .cta-content .button-area {
@@ -418,43 +422,38 @@ strong {
   }
 }
 .grid .box .bg-color {
-  flex-wrap: wrap;
-  align-content: center;
   width: 100%;
   height: 100%;
-  color: white;
   transition: background 0.4s;
 }
 .grid .box .bg-color.info {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
 .grid .box .bg-color.team {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   text-align: center;
 }
 .grid .box .bg-color.team h3 {
-  margin-left: -1rem;
+  margin-left: -0.4rem;
 }
 .grid .box .bg-color.team .box-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 .grid .box .bg-color .box-content {
-  width: 80%;
   margin: 3rem;
 }
 .grid .box .bg-color .box-content h3 {
-  font-size: 2.4rem;
   margin-bottom: 20px;
-}
-.grid .box .bg-color .box-content p {
-  font-size: 2rem;
 }
 .grid .box .bg-color .box-content img {
   border-radius: 50%;
@@ -493,48 +492,46 @@ strong {
 }
 .grid .box3 {
   grid-area: box3;
-  background: url("/img/two-workers.jpeg");
+  background: url("/img/person-jumping.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .grid .box4 {
   grid-area: box4;
-  background: url("/img/person-jumping.jpg");
+  background: url("/img/two-workers.jpeg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .grid .box5 {
   grid-area: box5;
-  background: url("/img/construction-site.jpeg");
+  background: url("/img/food-service.jpeg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .grid .box6 {
   grid-area: box6;
-  background: url("/img/food-service.jpeg");
+  background: url("/img/construction-site.jpeg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .menu {
   background: rgba(36, 41, 67, 0.9);
-  height: 100%;
   width: 100%;
-  position: fixed;
-  top: 0;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  align-content: center;
+  position: fixed;
+  top: 0;
   display: none;
   z-index: 999;
 }
 .menu .close {
-  color: white;
   font-size: 3rem;
   position: fixed;
   top: 10px;
@@ -559,14 +556,15 @@ strong {
   }
 }
 .menu .menu-content .links {
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 20px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  font-weight: bold;
   color: white;
-  text-decoration: none;
   width: 100%;
   text-align: center;
+}
+.menu .menu-content .links:hover {
+  color: #6fc3df;
 }
 .menu .menu-content .styled-button {
   margin: 10px 0;
@@ -606,7 +604,6 @@ footer .social-icons {
   }
 }
 footer .social-icons i {
-  font-size: 2rem;
   color: #242943;
   background: white;
   border-radius: 50%;

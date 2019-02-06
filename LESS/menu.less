@@ -1,16 +1,12 @@
 .menu {
   background: @banner-color;
-  height: 100%;
-  .w-100;
+  .dimensions(100%, 100%);
+  .custom-flex(center, center, wrap);
   position: fixed;
   top: 0;
-  .custom-flex(center, center);
-  flex-wrap: wrap;
-  align-content: center;
   display: none;
   z-index: 999;
   .close {
-    color: white;
     font-size: @extra-large-text;
     position: fixed;
     top: 10px;
@@ -19,8 +15,7 @@
   }
   .menu-content {
     width: 90%;
-    .custom-flex(center, center);
-    flex-wrap: wrap;
+    .custom-flex(center, center, wrap);
     @media @landscape {
       width: 50%;
     }
@@ -28,14 +23,15 @@
       width: 40%;
     }
     .links {
-      font-size: @medium-text;
+      font-size: @small-text;
       padding: 20px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-      font-weight: bold;
+      border-bottom: 1px solid @light-white;
       color: white;
-      text-decoration: none;
       .w-100;
       text-align: center;
+      &:hover {
+        color: @accent1;
+      }
     }
     .styled-button {
       margin: 10px 0;

@@ -39,34 +39,26 @@
   }
   .box {
     .bg-color {
-      flex-wrap: wrap;
-      align-content: center;
       .dimensions(100%, 100%);
-      color: white;
       .background-transition;
       &.info {
-        .custom-flex(flex-start, center);
+        .custom-flex(flex-start, center, wrap);
       }
       &.team {
-        .custom-flex(center, center);
+        .custom-flex(center, center, wrap);
         text-align: center;
         h3 {
-          margin-left: -1rem;
+          margin-left: -0.4rem;
         }
         .box-content {
-          .custom-flex(center, center);
+          .custom-flex(center, center, wrap);
           flex-direction: column;
         }
       }
       .box-content {
-        width: 80%;
         margin: 3rem;
         h3 {
-          font-size: @large-text;
           margin-bottom: 20px;
-        }
-        p {
-          font-size: @medium-text;
         }
         img {
           border-radius: 50%;
@@ -95,32 +87,32 @@
   }
   .box1 {
     grid-area: box1;
-    background: url("/img/hands-joined.jpeg");
+    background: @bg-1;
     .img-bg;
   }
   .box2 {
     grid-area: box2;
-    background: url("/img/person-leaning.jpeg");
+    background: @bg-2;
     .img-bg;
   }
   .box3 {
     grid-area: box3;
-    background: url("/img/two-workers.jpeg");
+    background: @bg-3;
     .img-bg;
   }
   .box4 {
     grid-area: box4;
-    background: url("/img/person-jumping.jpg");
+    background: @bg-4;
     .img-bg;
   }
   .box5 {
     grid-area: box5;
-    background: url("/img/construction-site.jpeg");
+    background: @bg-5;
     .img-bg;
   }
   .box6 {
     grid-area: box6;
-    background: url("/img/food-service.jpeg");
+    background: @bg-6;
     .img-bg;
   }
 }
