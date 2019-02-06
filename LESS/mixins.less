@@ -1,25 +1,30 @@
+// flex container
 .custom-flex(@justify-content, @align-items, @wrap) {
   display: flex;
   justify-content: @justify-content;
   align-items: @align-items;
   flex-wrap: @wrap;
 }
+// image background center and cover
 .img-bg {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+// width 100%
 .w-100() {
   width: 100%;
 }
+// width and height
 .dimensions(@width, @height) {
   width: @width;
   height: @height;
 }
+// background transition takes less than half a second
 .background-transition() {
   transition: background 0.4s;
 }
-
+// Xmargin auto with variable y margin
 .block-center(@yMargin) {
   margin: @yMargin auto;
 }

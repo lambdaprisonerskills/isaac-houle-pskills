@@ -7,9 +7,8 @@ footer {
   .social-icons {
     padding: 20px 0;
     width: 90%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    .custom-flex(space-between, center, wrap);
+    .block-center(0);
     @media @landscape {
       width: 35%;
       margin-left: 5%;
@@ -25,9 +24,10 @@ footer {
       color: @main-color;
       background: white;
       border-radius: 50%;
+      text-align: center;
+      // set the circle boundaries
       width: 4rem;
       padding: 1rem 0;
-      text-align: center;
       .background-transition;
       &:hover {
         background: @accent1;
