@@ -2,9 +2,7 @@
   .img-bg;
   background-attachment: fixed;
   width: 100%;
-
   color: white;
-
   &.index-banner {
     background-image: @index-banner-img;
     height: 60vh;
@@ -63,7 +61,8 @@
         width: 80%;
       }
       h1 {
-        .font(2.4rem, 20px 0, 1px solid white);
+        .font(2.4rem, 20px 0);
+        border-bottom: 1px solid white;
         width: 100%;
         @media @tablet {
           font-size: 3rem;

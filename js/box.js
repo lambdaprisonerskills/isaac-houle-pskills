@@ -13,6 +13,7 @@ class Box {
     this.background.style.background = "rgba(36, 41, 67, 0.9)";
   }
   mouseOff() {
+    // by just removing the inline style, the element reverts to how it is styled in less
     this.background.style.background = "";
   }
 }
