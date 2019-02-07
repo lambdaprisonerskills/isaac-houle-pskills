@@ -146,6 +146,9 @@ body {
   line-height: 1.5;
   color: white;
 }
+main {
+  background: rgba(36, 41, 67, 0.9);
+}
 h1 {
   font-size: 3rem;
   font-weight: 600;

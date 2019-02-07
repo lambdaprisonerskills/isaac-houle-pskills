@@ -7,8 +7,8 @@ class Box {
     this.links = this.element.querySelectorAll("a");
     // get the delay data from the background. make it a number not a string
     this.delay = Number(this.background.dataset.delay);
-    // animate the background to appear, each box 0.5 seconds apart
-    TweenMax.from(this.background, 1, {
+    // animate the boxes to appear, each box 0.5 seconds apart
+    TweenMax.from(this.element, 1, {
       opacity: 0,
       delay: this.delay
     });
