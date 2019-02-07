@@ -5,6 +5,13 @@ class Box {
     this.background = this.element.querySelector(".bg-color");
     // also get all the links
     this.links = this.element.querySelectorAll("a");
+    // get the delay data from the background. make it a number not a string
+    this.delay = Number(this.background.dataset.delay);
+    // animate the background to appear, each box 0.5 seconds apart
+    TweenMax.from(this.background, 1, {
+      opacity: 0,
+      delay: this.delay
+    });
     // listen for mouseover
     this.element.addEventListener("mouseover", () => {
       this.mouseOver();
@@ -27,5 +34,4 @@ class Box {
 }
 
 let boxes = Array.from(document.querySelectorAll(".box"));
-console.log(boxes);
 boxes.map(box => new Box(box));
