@@ -10,4 +10,4 @@ This repo contains the marketing page for the app. The marketing page styling is
 
 The marketing page is built primarily with flexbox, and the main grid section is made with CSS Grid. It includes a reusable box component with mouseover animations. The page has been CSS reset, with font-sizes defined in variables.
 
-To host the page on netlify, got to netlify.com and log into your account. Click on create a new site, and choose the git provider, in this case GitHub. Choose the repository and branch you want to launch from.
+To host the page on netlify, got to netlify.com and log into your account. Click on create a new site, and choose the git provider, in this case GitHub. Choose the repository and branch you want to launch from. You can find my deployment at https://amazing-wozniak-539f92.netlify.com/
