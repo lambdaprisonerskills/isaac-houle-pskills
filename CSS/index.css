@@ -178,6 +178,10 @@ strong {
   text-align: center;
   margin: 30px 0;
   letter-spacing: 0.5rem;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  -ms-transition: background 0.4s;
+  -o-transition: background 0.4s;
   transition: background 0.4s;
 }
 .primary-button {
@@ -272,6 +276,9 @@ strong {
   }
 }
 .banner nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -287,6 +294,10 @@ strong {
   font-size: 2.4rem;
   margin-right: 10px;
   cursor: pointer;
+  -webkit-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  -ms-transition: color 0.4s;
+  -o-transition: color 0.4s;
   transition: color 0.4s;
 }
 .banner nav i:hover {
@@ -300,6 +311,10 @@ strong {
   font-weight: bold;
   padding: 5px;
   margin-left: 10px;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  -ms-transition: background 0.4s;
+  -o-transition: background 0.4s;
   transition: background 0.4s;
 }
 .banner nav .logo:hover {
@@ -312,6 +327,9 @@ strong {
   top: 40px;
 }
 .banner .banner-color .header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -379,6 +397,9 @@ strong {
   padding: 20px 0 0;
 }
 .cta .cta-content .button-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -403,6 +424,7 @@ strong {
   width: 45%;
 }
 .grid {
+  display: -ms-grid;
   display: grid;
 }
 .grid.index-grid {
@@ -434,15 +456,25 @@ strong {
 .grid .box .bg-color {
   width: 100%;
   height: 100%;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  -ms-transition: background 0.4s;
+  -o-transition: background 0.4s;
   transition: background 0.4s;
 }
 .grid .box .bg-color.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
 .grid .box .bg-color.team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -453,6 +485,9 @@ strong {
   margin-left: -0.4rem;
 }
 .grid .box .bg-color.team .box-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -532,6 +567,9 @@ strong {
   background: rgba(36, 41, 67, 0.9);
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -550,6 +588,9 @@ strong {
 }
 .menu .menu-content {
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -592,6 +633,9 @@ footer {
 footer .social-icons {
   padding: 20px 0;
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -622,6 +666,10 @@ footer .social-icons i {
   text-align: center;
   width: 4rem;
   padding: 1rem 0;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  -ms-transition: background 0.4s;
+  -o-transition: background 0.4s;
   transition: background 0.4s;
 }
 footer .social-icons i:hover {
